@@ -1,3 +1,3 @@
 # NetMAPPER
 
-Create a web interface for the CLI tool `nmap`.
+Web interface for the CLI tool `nmap`.
