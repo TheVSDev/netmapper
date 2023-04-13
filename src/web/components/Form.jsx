@@ -1,5 +1,5 @@
 // Imports
-import styles from '@/web/styles/Home.module.css'
+import styles from '@/web/styles/Form.module.css'
 
 // Form function
 const Form = () => {
