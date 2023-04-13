@@ -1,8 +1,10 @@
+// Imports
 import Head from 'next/head'
+
 import styles from '@/web/styles/Home.module.css'
-import Li from "@/web/components/Li"
+import NavBar from "@/web/components/NavBar"
 
-
+// Home function
 export default function Home(props) {
 
   const { name, href, ...otherProps } = props
@@ -16,10 +18,7 @@ export default function Home(props) {
       </Head>
       
       <main className={styles.main}>
-        <ul className={styles.navbarUl}>
-          <Li name="Home" href="#" />
-          <Li name="History" href="#" />
-        </ul>
+        <NavBar />
         <h1>Net Mapper</h1>
       </main>
     </>
