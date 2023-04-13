@@ -9,6 +9,12 @@
   font-family: 'Nunito', sans-serif;
 }
 
+.footer {
+  padding: 15px 23px;
+  color: white;
+  text-align: center;
+  background-color: #111;
+}
 
 /* ---Navbar--- */
 .navbarUl {

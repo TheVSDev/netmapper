@@ -24,6 +24,9 @@ export default function Home(props) {
         <br />
         <Form />
       </main>
+      <footer className={styles.footer}>
+        <span>Created By SPASIC Veljko | &copy; All rights reserved.</span>
+      </footer>
     </>
   )
 }
