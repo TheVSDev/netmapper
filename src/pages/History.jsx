@@ -3,7 +3,7 @@ import NavBar from "@/web/components/Navbar"
 import styles from '@/web/styles/Home.module.css'
 
 // History function
-function History() {
+const History = () => {
     return (
         <main className={styles.main}>
             <NavBar />

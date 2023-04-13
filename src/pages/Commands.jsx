@@ -3,7 +3,7 @@ import NavBar from "@/web/components/NavBar"
 import styles from '@/web/styles/Home.module.css'
 
 // Commands function
-function Commands() {
+const Commands = () => {
     return (
         <main className={styles.main}>
             <NavBar/>

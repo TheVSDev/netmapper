@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 import styles from '@/web/styles/Home.module.css'
 import NavBar from "@/web/components/NavBar"
+import Form from "@/web/components/Form"
 
 // Home function
 export default function Home(props) {
@@ -20,6 +21,8 @@ export default function Home(props) {
       <main className={styles.main}>
         <NavBar />
         <h1>Net Mapper</h1>
+        <br />
+        <Form />
       </main>
     </>
   )
