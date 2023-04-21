@@ -6,7 +6,7 @@ const Form = () => {
     return (
         <>
             <form className={styles.formContainer}>
-                <label>Command: </label>
+                <label>What are you mapping ? </label>
                 <br />
                 <input type="text" name="command" className={styles.formField} />
                 <br />
@@ -38,11 +38,6 @@ const Form = () => {
                 <br />
                 <br />
 
-                <label>What are you mapping ? </label>
-                <br />
-                <input type="text" name="command" className={styles.formField} />
-                <br />
-                <br />
 
                 <button className={styles.buttonRun}>Run</button>
             </form>
