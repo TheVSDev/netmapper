@@ -5,7 +5,7 @@
 }
   
 .formField {
-    padding: 6px 14px;
+    padding: 8px 19px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 3px solid #ccc;
@@ -18,35 +18,4 @@
   
 .formField:focus {
     border: 3px solid #555;
-}
-
-.buttonRun {
-  background: linear-gradient(to bottom right, #04AA6D, #74d1af);
-  border: 0;
-  border-radius: 12px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 2.5;
-  outline: transparent;
-  padding: 3px 55px;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .2s ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  margin-left: 50px;
-}
-
-.buttonRun:not([disabled]):focus {
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(7, 125, 38, 0.5), .125rem .125rem 1rem rgba(0, 199, 53, 0.5);
-}
-
-.buttonRun:not([disabled]):hover {
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(7, 125, 38, 0.5), .125rem .125rem 1rem rgba(0, 199, 53, 0.5);
 }

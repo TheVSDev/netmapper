@@ -6,9 +6,7 @@ import NavBar from "@/web/components/NavBar"
 import Form from "@/web/components/Form"
 
 // Home function
-export default function Home(props) {
-
-  const { name, href, ...otherProps } = props
+export default function Home() {
 
   return (
     <>
