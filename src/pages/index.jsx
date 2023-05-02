@@ -4,6 +4,7 @@ import Head from 'next/head'
 import styles from '@/web/styles/Home.module.css'
 import NavBar from "@/web/components/NavBar"
 import Form from "@/web/components/Form"
+import Footer from '@/web/components/Footer'
 
 // Home function
 export default function Home() {
@@ -22,9 +23,7 @@ export default function Home() {
         <br />
         <Form />
       </main>
-      <footer className={styles.footer}>
-        <span>Created By SPASIC Veljko | &copy; All rights reserved.</span>
-      </footer>
+      <Footer />
     </>
   )
 }
