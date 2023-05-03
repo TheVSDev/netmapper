@@ -8,13 +8,13 @@ function NavBar() {
   return (
     <ul className={styles.navbarUl}>
       <li className={styles.navbarLi}>
-        <Link className={styles.navbarA} href="/ScanPage">Home</Link>
+        <Link className={styles.navbarA} href="/scan-page">Home</Link>
       </li>
       <li className={styles.navbarLi}>
-        <Link className={styles.navbarA} href="/History">History</Link>
+        <Link className={styles.navbarA} href="/history">History</Link>
       </li>
       <li className={styles.navbarLi}>
-        <Link className={styles.navbarA} href="/Commands">Commands</Link>
+        <Link className={styles.navbarA} href="/commands">Commands</Link>
       </li>
   </ul>
 

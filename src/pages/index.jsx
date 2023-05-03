@@ -16,6 +16,13 @@ export default function Welcome() {
         <title>Net Mapper</title>
       </Head>
       
+
+        <div className={styles.box}>
+              <div className={styles.waveOne}></div>
+              <div className={styles.waveTwo}></div>
+              <div className={styles.waveThree}></div>
+        </div>
+
       <main className={styles.main}>
         <div className={styles.container}>
             <h1 className={styles.title}>Net Mapper</h1>
@@ -27,7 +34,7 @@ export default function Welcome() {
             </p>
             <br />
             <br />
-            <Link href="/ScanPage"><Button btnLabel="Let's map the network" /></Link>
+            <Link href="/scan-page"><Button btnLabel="Let's map the network" /></Link>
         </div>
       </main>
     </>
