@@ -1,7 +1,7 @@
 .formContainer {
     border: 4px solid #2c2f33;
-    border-radius: 30px;
-    padding: 30px 150px;
+    border-radius: 50px;
+    padding: 0 117px 37px 117px;
 }
   
 .formField {
@@ -18,4 +18,10 @@
   
 .formField:focus {
     border: 3px solid #555;
+}
+
+.title {
+    text-align: center;
+    font-size: 46px;
+    padding: 20px;
 }

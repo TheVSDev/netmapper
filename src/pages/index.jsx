@@ -33,7 +33,7 @@ export default function Welcome() {
               Let&apos;s map the network together.
             </p>
             <br />
-            <br />
+            <br /> 
             <Link href="/scan-page"><Button btnLabel="Let's map the network" /></Link>
         </div>
       </main>
