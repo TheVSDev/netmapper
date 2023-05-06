@@ -7,6 +7,7 @@ import Form from "@/web/components/Form"
 import FormField from "@/web/components/FormField"
 import Button from "@/web/components/Button"
 import Footer from '@/web/components/Footer'
+import Radio from '@/web/components/Radio'
 
 
 const initialValues = {
@@ -34,21 +35,25 @@ const ScanPage = () => {
                 <br />
                 <FormField inputType="text" inputName="ip" inputPlaceholder="IP" />
                 <br />
-                <br />
 
-                <label>Option: </label>
-                <br />
-                <select className={styles.formField} name="option">
-                    <option>----</option>
-                    <option value="-sV">-sV</option>
-                    <option value="-sS">-sS</option>
-                </select>
+                <Radio radioName="scanOption" radioValue="-sV" radioLabel="-sV" />
+                <Radio radioName="scanOption" radioValue="-sS" radioLabel="-sS" />
                 <br />
                 <br />
 
-                <label>Max retries: </label>
-                <br />
+                <label>Max Retries:</label>
                 <FormField inputType="number" inputName="maxRetries" inputPlaceholder="Max Retries" />
+                <br />
+                <br />
+
+                <label>Max Rate:</label>
+                <FormField inputType="number" inputName="maxRate" inputPlaceholder="Max Rate" />
+                <br />
+                <br />
+
+                <label>Host Timeout:</label>
+                <FormField inputType="number" inputName="hostTimeout" inputPlaceholder="Host Timeout" />
+                <br />
                 <br />
                 <br />
 
