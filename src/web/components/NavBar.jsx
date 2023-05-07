@@ -8,6 +8,9 @@ function NavBar() {
   return (
     <ul className={styles.navbarUl}>
       <li className={styles.navbarLi}>
+        <Link className={styles.navbarA} href="/">NETMAPPER</Link>
+      </li>
+      <li className={styles.navbarLi}>
         <Link className={styles.navbarA} href="/scan-page">Scanner</Link>
       </li>
       <li className={styles.navbarLi}>
