@@ -19,6 +19,12 @@ function NavBar() {
       <li className={styles.navbarLi}>
         <Link className={styles.navbarA} href="/commands">Commands</Link>
       </li>
+      <li className={styles.navbarLiSign}>
+        <Link className={styles.navbarA} href="/sign-up">Sign up</Link>
+      </li>
+      <li className={styles.navbarLiSign}>
+        <Link className={styles.navbarA} href="/sign-in">Sign in</Link>
+      </li>
   </ul>
 
   )

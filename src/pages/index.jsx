@@ -30,11 +30,14 @@ export default function Welcome() {
             <p className={styles.text}>
               Welcome to Network Mapper online tool. <br />
               It is an online web interface for a command line tool <code className={styles.code}>nmap</code>. <br />
-              Let&apos;s map the network together.
+              Let&apos;s map the network together. <br />
+              Sign in your account and if you don&apos;t have one, create it.
             </p>
             <br />
             <br /> 
-            <Link href="/scan-page"><Button btnLabel="Let's map the network" /></Link>
+            <Link href="/scan-page"><Button btnLabel="Let's map the network" /></Link><br /><br />
+            <Link href="/sign-in"><Button btnLabel="Log into your account" /></Link><br /><br />
+            <Link href="/sign-up"><Button btnLabel="Create an account" /></Link>
         </div>
       </main>
     </>

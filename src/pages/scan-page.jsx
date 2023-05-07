@@ -1,6 +1,5 @@
 // Imports
 import Head from 'next/head'
-import * as yup from "yup"
 
 import styles from '@/web/styles/Home.module.css'
 import NavBar from "@/web/components/NavBar"

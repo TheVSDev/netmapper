@@ -27,3 +27,16 @@
 .navbarLi:active {
     background-color: #04AA6D;
 }
+
+.navbarLiSign {
+    display: inline;
+    float: right;
+}
+
+.navbarLiSign:hover {
+    background-color: #111;
+}
+  
+.navbarLiSign:active {
+    background-color: #04AA6D;
+}
