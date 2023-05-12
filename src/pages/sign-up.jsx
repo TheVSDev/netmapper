@@ -5,13 +5,18 @@ import styles from '@/web/styles/Home.module.css'
 import NavBar from "@/web/components/NavBar"
 import Form from "@/web/components/Form"
 import FormField from "@/web/components/FormField"
-import Button from "@/web/components/Button"
+import SubmitButton from "@/web/components/SubmitButton"
 import Footer from '@/web/components/Footer'
+import UserModel from '@/api/db/models/UserModel'
 
 const initialValues = {
     username: "",
     email: "",
     password: "",
+}
+
+const handleSubmit = async () => {
+   await console.log("Submit Button works properly.")
 }
 
 // SignUp function
@@ -27,7 +32,7 @@ const SignUp = () => {
           <main className={styles.main}>
             <NavBar />
             <br />
-            <Form title="Sign up" initialValues={initialValues}>
+            <Form title="Sign up" initialValues={initialValues} onSubmit={handleSubmit}>
                 <label>Username:</label>
                 <br />
                 <FormField inputType="text" inputName="username" inputPlaceholder="Username" />
@@ -45,7 +50,7 @@ const SignUp = () => {
                 <br />
 
 
-                <Button btnLabel="Create account" /*onClick={handleSubmit}*//>
+                <SubmitButton /*btnLabel="Create account" onClick={handleSubmit}*/ />
             </Form>
           </main>
           <Footer />
