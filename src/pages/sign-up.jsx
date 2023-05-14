@@ -16,7 +16,7 @@ const initialValues = {
 }
 
 const handleSubmit = async () => {
-   await console.log("Submit Button works properly.")
+   await console.log("Submit Button works properly and without error.")
 }
 
 // SignUp function
