@@ -1,9 +1,9 @@
 // Imports
-import Head from 'next/head'
+import Head from "next/head"
 
 import NavBar from "@/web/components/NavBar"
-import styles from '@/web/styles/Home.module.css'
-import Footer from '@/web/components/Footer'
+import styles from "@/web/styles/Home.module.css"
+import Footer from "@/web/components/Footer"
 
 // Commands function
 const Commands = () => {

@@ -1,10 +1,33 @@
-import styles from "@/web/styles/Form.module.css"
+import clsx from "clsx"
+import { Field } from "formik"
+
+// import styles from "@/web/styles/Form.module.css"
 
 const FormField = (props) => {
-    const { inputType, inputName, inputPlaceholder, ...otherProps } = props
-    return (
-        <input type={inputType} name={inputName} placeholder={inputPlaceholder} className={styles.formField} />
-    )
+  const { as: Component = "input", name, ...otherProps } = props
+
+  return (
+    <Field name={name}>
+      {({ field, meta: { error, touched } }) => (
+        <label className="flex flex-col gap-2">
+          <Component
+            {...field}
+            {...otherProps}
+            className={clsx(
+              "border-2 px-4 py-2 rounded-lg my-1 focus:outline-0",
+              {
+                "focus:border-blue-600": !error || !touched,
+                "border-red-600": error && touched,
+              },
+            )}
+          />
+          {error && touched && (
+            <span className="text-sm font-medium text-red-500 mb-2">{error}</span>
+          )}
+        </label>
+      )}
+    </Field>
+  )
 }
 
 export default FormField

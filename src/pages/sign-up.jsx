@@ -1,61 +1,101 @@
 // Imports
-import Head from 'next/head'
+import Head from "next/head"
+import * as yup from "yup"
+import { useRouter } from "next/router.js"
 
-import styles from '@/web/styles/Home.module.css'
+import styles from "@/web/styles/Home.module.css"
 import NavBar from "@/web/components/NavBar"
-import Form from "@/web/components/Form"
-import FormField from "@/web/components/FormField"
-import SubmitButton from "@/web/components/SubmitButton"
-import Footer from '@/web/components/Footer'
-import UserModel from '@/api/db/models/UserModel'
+import Footer from "@/web/components/Footer"
+import Form from "@/web/components/Form.jsx"
+import FormField from "@/web/components/FormField.jsx"
+import SubmitButton from "@/web/components/SubmitButton.jsx"
+import api from "@/web/services/api.js"
 
+// Form attributes
 const initialValues = {
-    username: "",
-    email: "",
-    password: "",
+  username: "",
+  email: "",
+  password: "",
 }
 
-const handleSubmit = async () => {
-   await console.log("Submit Button works properly and without error.")
-}
+const validationSchema = yup.object().shape({
+  username: yup.string().min(1).required("Username is required").label("Name"),
+  email: yup.string().email().required("E-mail is required").label("E-mail"),
+  password: yup
+  .string()
+  .min(8)
+  .matches(/^.*(?=.*[0-9]+).*$/, "Password must contain a number")
+  .matches(
+    /^.*(?=.*\p{Ll}+).*$/u,
+    "Password must contain a lower case letter"
+  )
+  .matches(
+    /^.*(?=.*\p{Lu}+).*$/u,
+    "Password must contain a upper case letter"
+  )
+  .matches(
+    /^.*(?=.*[^0-9\p{L}]+).*$/u,
+    "Password must contain a special character"
+  )
+  .required("Password is required")
+  .label("Password"),
+})
 
 // SignUp function
 const SignUp = () => {
-    return (
-        <>
-          <Head>
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="/favicon.svg" />
-            <title>Net Mapper</title>
-          </Head>
-          
-          <main className={styles.main}>
-            <NavBar />
-            <br />
-            <Form title="Sign up" initialValues={initialValues} onSubmit={handleSubmit}>
-                <label>Username:</label>
-                <br />
-                <FormField inputType="text" inputName="username" inputPlaceholder="Username" />
-                <br />
+  const router = useRouter()
+  const handleSubmit = async (values) => {
+    try {
+      await api.post("/sign-up", values)
 
-                <label>Email:</label>
-                <br />
-                <FormField inputType="email" inputName="email" inputPlaceholder="Email" />
-                <br />
+      router.push("/sign-in")
+    } catch (err) {
+      //
+    }
+  }
 
-                <label>Password:</label>
-                <FormField inputType="password" inputName="password" inputPlaceholder="Password" />
-                <br />
-                <br />
-                <br />
-
-
-                <SubmitButton /*btnLabel="Create account" onClick={handleSubmit}*/ />
-            </Form>
-          </main>
-          <Footer />
-        </>
-      )
+  return (
+    <>
+      <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.svg" />
+          <title>Net Mapper</title>
+      </Head>
+      <main className={styles.main}>
+        <NavBar />
+        <br />
+        <Form
+          title="Sign Up"
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          <label>Username:</label>
+          <FormField name="username" placeholder="Create your username" label="Username" />
+          <br />
+          <label>E-mail:</label>
+          <FormField
+            name="email"
+            type="email"
+            placeholder="Enter your e-mail"
+            label="E-mail"
+          />
+          <br />
+          <label>Password:</label>
+          <FormField
+            name="password"
+            type="password"
+            placeholder="Create your password"
+            label="Password"
+          />
+          <br />
+          <br />
+          <SubmitButton />
+        </Form>
+      </main>
+      <Footer />
+    </>
+  )
 }
 
 export default SignUp

@@ -1,13 +1,12 @@
 // Imports
-import Head from 'next/head'
+import Head from "next/head"
 import Link from "next/link"
 
-import styles from '@/web/styles/Welcome.module.css'
-import Button from '@/web/components/Button'
+import styles from "@/web/styles/Welcome.module.css"
+import Button from "@/web/components/Button"
 
 // Welcome function
 export default function Welcome() {
-
   return (
     <>
       <Head>
