@@ -1,9 +1,11 @@
 import styles from "@/web/styles/Button.module.css"
 
-const Button = () => {
+const SubmitButton = (props) => {
+    const { submitValue } = props
+
     return (
-        <input type="submit" className={styles.button} />
+        <input type="submit" className={styles.button} value={submitValue} />
     )
 }
 
-export default Button
+export default SubmitButton

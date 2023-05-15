@@ -90,7 +90,7 @@ const SignUp = () => {
           />
           <br />
           <br />
-          <SubmitButton />
+          <SubmitButton submitValue="Create account" />
         </Form>
       </main>
       <Footer />

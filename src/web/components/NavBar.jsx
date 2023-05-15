@@ -1,7 +1,7 @@
 // Imports
 import Link from "next/link"
 
-import styles from '@/web/styles/Navbar.module.css'
+import styles from "@/web/styles/Navbar.module.css"
 
 // NavBar function
 function NavBar() {

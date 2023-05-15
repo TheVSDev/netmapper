@@ -54,7 +54,7 @@ const SignIn = () => {
           />
           <br />
           <br />
-          <SubmitButton />
+          <SubmitButton submitValue="Log in" />
         </Form>
       </main>
       <Footer />

@@ -6,7 +6,7 @@ import styles from "@/web/styles/Home.module.css"
 import NavBar from "@/web/components/NavBar"
 import Form from "@/web/components/Form"
 import FormField from "@/web/components/FormField"
-import Button from "@/web/components/Button"
+import SubmitButton from "@/web/components/SubmitButton"
 import Footer from "@/web/components/Footer"
 import Radio from "@/web/components/Radio"
 
@@ -59,7 +59,7 @@ const ScanPage = () => {
                 <br />
 
 
-                <Button btnLabel="Run Scan" />
+                <SubmitButton submitValue="Run Scan" />
             </Form>
             <br />
           </main>
