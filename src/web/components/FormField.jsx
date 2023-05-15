@@ -16,7 +16,7 @@ const FormField = (props) => {
             className={clsx(
               "border-2 px-4 py-2 rounded-lg my-1 focus:outline-0",
               {
-                "focus:border-blue-600": !error || !touched,
+                "focus:border-green-600": !error || !touched,
                 "border-red-600": error && touched,
               },
             )}
