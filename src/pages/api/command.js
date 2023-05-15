@@ -3,6 +3,7 @@ import { spawn } from "child_process"
 
 import mw from "@/api/mw"
 import auth from "@/api/middlewares/auth"
+import CommandModel from "@/api/db/models/CommandModel"
 
 // handler function
 const handler = mw({
@@ -10,6 +11,7 @@ const handler = mw({
     auth,
     async (req, res) => {
       const { ip, scanOption, options } = req.body
+      const user = req.user
 
       // Initializing option arrays for storing options
       let allOptions = []
@@ -51,7 +53,15 @@ const handler = mw({
       try {
         const result = await scanResult
 
-        res.send({ result })
+        // Creating DB model from scan result
+        const command = await CommandModel.create({
+          ip,
+          options: allOptions,
+          result,
+          user: { id: user._id, username: user.username },
+        })
+
+        res.send({ result: command })
 
         return
       } catch (err) {
@@ -59,6 +69,20 @@ const handler = mw({
 
         return
       }
+    },
+  ],
+  GET: [
+    auth,
+    async (req, res) => {
+      const user = req.user
+
+      // Quering the DB for CommandModel and sorting it
+      const history = await CommandModel.find({
+        "user.id": user._id,
+        "user.username": user.username,
+      }).sort({ createdAt: -1 })
+
+      res.send({ result: history })
     },
   ],
 })
