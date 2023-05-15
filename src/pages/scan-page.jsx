@@ -46,15 +46,15 @@ const ScanPage = () => {
                 <br />
 
                 <label>Max Retries:</label>
-                <FormField type="number" name="maxRetries" placeholder="Max Retries" />
+                <FormField type="number" name="options.maxRetries" placeholder="Max Retries" />
                 <br />
 
                 <label>Max Rate:</label>
-                <FormField type="number" name="maxRate" placeholder="Max Rate" />
+                <FormField type="number" name="options.maxRate" placeholder="Max Rate" />
                 <br />
 
                 <label>Host Timeout:</label>
-                <FormField type="number" name="hostTimeout" placeholder="Host Timeout" />
+                <FormField type="number" name="options.hostTimeout" placeholder="Host Timeout" />
                 <br />
                 <br />
 
