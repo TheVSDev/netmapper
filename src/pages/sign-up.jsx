@@ -71,13 +71,13 @@ const SignUp = () => {
           onSubmit={handleSubmit}
         >
           <label>Username:</label>
-          <FormField name="username" placeholder="Create your username" label="Username" />
+          <FormField name="username" placeholder="jdoe" label="Username" />
           <br />
           <label>E-mail:</label>
           <FormField
             name="email"
             type="email"
-            placeholder="Enter your e-mail"
+            placeholder="johndoe@omail.com"
             label="E-mail"
           />
           <br />
@@ -85,7 +85,7 @@ const SignUp = () => {
           <FormField
             name="password"
             type="password"
-            placeholder="Create your password"
+            placeholder="Pa$$w0rd"
             label="Password"
           />
           <br />

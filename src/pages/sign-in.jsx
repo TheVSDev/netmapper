@@ -41,7 +41,7 @@ const SignIn = () => {
           <FormField
             name="username"
             type="text"
-            placeholder="Enter your username"
+            placeholder="jdoe"
             label="Username"
           />
           <br />
@@ -49,7 +49,7 @@ const SignIn = () => {
           <FormField
             name="password"
             type="password"
-            placeholder="Enter your password"
+            placeholder="Pa$$w0rd"
             label="Password"
           />
           <br />
