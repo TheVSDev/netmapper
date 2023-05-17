@@ -13,8 +13,12 @@ import Radio from "@/web/components/Radio"
 // Form attributes
 const initialValues = {
   ip: "",
-  option: undefined,
-  maxRetries: undefined,
+  scanOption: undefined,
+  options: {
+    maxRetries: "",
+    maxRate: "",
+    maxTimeout: "",
+  },
 }
 
 const validationSchema = yup.object().shape({
