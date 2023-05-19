@@ -1,6 +1,7 @@
 # NetMAPPER
 
 Web interface for the CLI tool `nmap`.
+
 [Github repository](https://github.com/TheVSDev/netmapper)
 
 ## Table of contents
@@ -18,13 +19,13 @@ Web interface for the CLI tool `nmap`.
 
 NetMapper is an online tool for the CLI tool `nmap`. 
 You can choose which of these three options you want to use to scan the network:
-    - `-sV`
-    - `-sS`
+   - `-sV`
+   - `-sS`
 
 You can also choose between options like:
-    - Host Timeout
-    - Max Rate
-    - Max Retries
+   - Host Timeout
+   - Max Rate
+   - Max Retries
 
 ### Links
 
