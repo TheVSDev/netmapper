@@ -4,6 +4,7 @@ import Head from "next/head"
 import NavBar from "@/web/components/NavBar"
 import styles from "@/web/styles/Home.module.css"
 import Footer from "@/web/components/Footer"
+import Title from "@/web/components/Title"
 
 // Commands function
 const Commands = () => {
@@ -17,7 +18,7 @@ const Commands = () => {
             
             <main className={styles.main}>
                 <NavBar/>
-                <h1>Commands</h1>
+                <Title titleLabel="Commands" />
             </main>
             <Footer />
         </>

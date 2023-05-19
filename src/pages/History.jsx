@@ -4,6 +4,7 @@ import Head from "next/head"
 import NavBar from "@/web/components/Navbar"
 import styles from "@/web/styles/Home.module.css"
 import Footer from "@/web/components/Footer"
+import Title from "@/web/components/Title"
 
 // History function
 const History = () => {
@@ -17,7 +18,7 @@ const History = () => {
             
             <main className={styles.main}>
                 <NavBar />
-                <h1>History</h1>
+                <Title titleLabel="History" />
             </main>
             <Footer />
         </>
