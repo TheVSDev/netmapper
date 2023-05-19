@@ -20,10 +20,10 @@ function NavBar() {
         <Link className={styles.navbarA} href="/commands">Commands</Link>
       </li>
       <li className={styles.navbarLiSign}>
-        <Link className={styles.navbarA} href="/sign-up">Sign up</Link>
+        <Link className={styles.navbarA} href="/">Log out</Link>
       </li>
       <li className={styles.navbarLiSign}>
-        <Link className={styles.navbarA} href="/sign-in">Sign in</Link>
+        <Link className={styles.navbarA} href="/profile">Profile</Link>
       </li>
   </ul>
 

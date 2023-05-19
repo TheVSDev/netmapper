@@ -4,7 +4,7 @@ import * as yup from "yup"
 
 import SubmitButton from "@/web/components/SubmitButton.jsx"
 import styles from "@/web/styles/Home.module.css"
-import NavBar from "@/web/components/NavBar"
+import NotConnectedNavbar from "@/web/components/NotConnectedNavbar"
 import Form from "@/web/components/Form"
 import FormField from "@/web/components/FormField"
 import Footer from "@/web/components/Footer"
@@ -30,7 +30,7 @@ const SignIn = () => {
           <title>Net Mapper</title>
       </Head>
       <main className={styles.main}>
-        <NavBar />
+        <NotConnectedNavbar />
         <br />
         <Form
           title="Sign In"

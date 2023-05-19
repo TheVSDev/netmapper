@@ -4,7 +4,7 @@ import * as yup from "yup"
 import { useRouter } from "next/router.js"
 
 import styles from "@/web/styles/Home.module.css"
-import NavBar from "@/web/components/NavBar"
+import NotConnectedNavbar from "@/web/components/NotConnectedNavbar"
 import Footer from "@/web/components/Footer"
 import Form from "@/web/components/Form.jsx"
 import FormField from "@/web/components/FormField.jsx"
@@ -62,7 +62,7 @@ const SignUp = () => {
           <title>Net Mapper</title>
       </Head>
       <main className={styles.main}>
-        <NavBar />
+        <NotConnectedNavbar />
         <br />
         <Form
           title="Sign Up"
