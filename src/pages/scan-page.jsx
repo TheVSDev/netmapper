@@ -2,7 +2,7 @@
 import Head from "next/head"
 import * as yup from "yup"
 
-import styles from "@/web/styles/Home.module.css"
+import Main from "@/web/components/Main"
 import NavBar from "@/web/components/NavBar"
 import Form from "@/web/components/Form"
 import FormField from "@/web/components/FormField"
@@ -36,7 +36,7 @@ const ScanPage = () => {
             <title>Net Mapper</title>
           </Head>
           
-          <main className={styles.main}>
+          <Main>
             <NavBar />
             <br />
             <Form title="Net Mapper" initialValues={initialValues} validationSchema={validationSchema}>
@@ -66,7 +66,7 @@ const ScanPage = () => {
                 <SubmitButton submitValue="Run Scan" />
             </Form>
             <br />
-          </main>
+          </Main>
           <Footer />
         </>
       )

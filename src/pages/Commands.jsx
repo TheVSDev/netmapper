@@ -2,7 +2,7 @@
 import Head from "next/head"
 
 import NavBar from "@/web/components/NavBar"
-import styles from "@/web/styles/Home.module.css"
+import Main from "@/web/components/Main"
 import Footer from "@/web/components/Footer"
 import Title from "@/web/components/Title"
 
@@ -16,10 +16,10 @@ const Commands = () => {
               <title>Net Mapper</title>
             </Head>
             
-            <main className={styles.main}>
+            <Main>
                 <NavBar/>
                 <Title titleLabel="Commands" />
-            </main>
+            </Main>
             <Footer />
         </>
     )

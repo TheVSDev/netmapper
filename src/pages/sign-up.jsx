@@ -3,7 +3,7 @@ import Head from "next/head"
 import * as yup from "yup"
 import { useRouter } from "next/router.js"
 
-import styles from "@/web/styles/Home.module.css"
+import Main from "@/web/components/Main"
 import NotConnectedNavbar from "@/web/components/NotConnectedNavbar"
 import Footer from "@/web/components/Footer"
 import Form from "@/web/components/Form.jsx"
@@ -61,7 +61,7 @@ const SignUp = () => {
           <link rel="icon" href="/favicon.svg" />
           <title>Net Mapper</title>
       </Head>
-      <main className={styles.main}>
+      <Main>
         <NotConnectedNavbar />
         <br />
         <Form
@@ -92,7 +92,7 @@ const SignUp = () => {
           <br />
           <SubmitButton submitValue="Create account" />
         </Form>
-      </main>
+      </Main>
       <Footer />
     </>
   )

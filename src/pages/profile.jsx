@@ -1,11 +1,12 @@
 // Imports
 import Head from "next/head"
 
-import styles from "@/web/styles/Home.module.css"
 import Title from "@/web/components/Title"
 import NavBar from "@/web/components/NavBar"
+import Main from "@/web/components/Main"
 import Footer from "@/web/components/Footer"
 
+// Profile function
 const Profile = () => {
     return (
         <>
@@ -14,10 +15,10 @@ const Profile = () => {
                 <link rel="icon" href="/favicon.svg" />
                 <title>Net Mapper</title>
             </Head>
-            <main className={styles.main}>
+            <Main>
                 <NavBar />
                 <Title titleLabel="Profile" />
-            </main>
+            </Main>
             <Footer />
         </>
     )

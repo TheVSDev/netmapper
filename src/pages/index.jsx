@@ -4,6 +4,8 @@ import Link from "next/link"
 
 import styles from "@/web/styles/Welcome.module.css"
 import Button from "@/web/components/Button"
+import Main from "@/web/components/Main"
+import Title from "@/web/components/Title"
 
 // Welcome function
 export default function Welcome() {
@@ -22,9 +24,9 @@ export default function Welcome() {
               <div className={styles.waveThree}></div>
         </div>
 
-      <main className={styles.main}>
+      <Main>
         <div className={styles.container}>
-            <h1 className={styles.title}>Net Mapper</h1>
+            <Title titleLabel="Net Mapper" />
             <br />
             <p className={styles.text}>
               Welcome to <span className={styles.underlineGradient}>Network Mapping</span> online tool. <br />
@@ -38,7 +40,7 @@ export default function Welcome() {
             <Link href="/sign-in"><Button btnLabel="Log into your account" /></Link><br /><br />
             <Link href="/sign-up"><Button btnLabel="Create an account" /></Link>
         </div>
-      </main>
+      </Main>
     </>
   )
 }

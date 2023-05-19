@@ -3,7 +3,7 @@ import Head from "next/head"
 import * as yup from "yup"
 
 import SubmitButton from "@/web/components/SubmitButton.jsx"
-import styles from "@/web/styles/Home.module.css"
+import Main from "@/web/components/Main"
 import NotConnectedNavbar from "@/web/components/NotConnectedNavbar"
 import Form from "@/web/components/Form"
 import FormField from "@/web/components/FormField"
@@ -29,7 +29,7 @@ const SignIn = () => {
           <link rel="icon" href="/favicon.svg" />
           <title>Net Mapper</title>
       </Head>
-      <main className={styles.main}>
+      <Main>
         <NotConnectedNavbar />
         <br />
         <Form
@@ -56,7 +56,7 @@ const SignIn = () => {
           <br />
           <SubmitButton submitValue="Log in" />
         </Form>
-      </main>
+      </Main>
       <Footer />
     </>
   )
