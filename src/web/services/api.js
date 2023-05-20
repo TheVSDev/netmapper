@@ -1,6 +1,7 @@
-import config from "@/web/config.js"
+// Imports
 import axios from "axios"
 import deepmerge from "deepmerge"
+import config from "@/web/config.js"
 
 const call =
   (method) =>
@@ -20,11 +21,12 @@ const call =
     return axios[method](path, method === "get" ? opts : data, opts)
   }
 
+  // CRUD
 const api = {
-  post: call("post"),
-  get: call("get"),
-  patch: call("patch"),
-  delete: call("delete"),
+  post: call("post"), // Create
+  get: call("get"), // Read
+  patch: call("patch"), // Update
+  delete: call("delete"), // Delete
 }
 
 export default api

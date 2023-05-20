@@ -1,10 +1,13 @@
+// Imports
+import jsonwebtoken from "jsonwebtoken"
 import config from "@/api/config.js"
 import UserModel from "@/api/db/models/UserModel.js"
-import jsonwebtoken from "jsonwebtoken"
 
+// auth function
 const auth = async (req, res, next) => {
   const { authorization } = req.headers
 
+  // If they don't have the authorization send the 403 status
   if (!authorization) {
     res.status(403).send({ error: "Forbidden" })
 
@@ -16,6 +19,7 @@ const auth = async (req, res, next) => {
       authorization,
       config.security.jwt.secret
     )
+    // Quering the DB to find the user
     const user = await UserModel.findOne({ _id: payload.userId })
 
     if (!user) {
