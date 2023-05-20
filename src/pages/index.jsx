@@ -37,8 +37,8 @@ export default function Welcome() {
             <br />
             <br /> 
             <Link href="/sign-in"><Button btnLabel="Log into your account" /></Link><br /><br />
-            <Link href="/sign-up"><Button btnLabel="Create an account" /></Link>
-            <Link href="/scan-page"><Button btnLabel="Continue as a guest" /></Link><br /><br />
+            <Link href="/sign-up"><Button btnLabel="Create an account" /></Link><br /><br />
+            <Link href="/scan-page"><Button btnLabel="Continue as a guest" /></Link>
         </div>
       </Main>
     </>
