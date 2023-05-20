@@ -9,8 +9,10 @@ Web interface for the CLI tool `nmap`.
 - [Overview](#overview)
   - [What is it](#what-is-it)
   - [Links](#links)
+  - [How to setup](#how-to-setup)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Continued development](#continued-development)
 - [Author](#author)
 
 ## Overview
@@ -31,6 +33,20 @@ You can also choose between options like:
 
 - Github repository: [https://github.com/TheVSDev/netmapper](https://github.com/TheVSDev/netmapper)
 
+### How to setup
+
+Create `.env.local` file with the following fields:
+- `PORT=<port you want to use>`
+- `DB_URI=<your URL to DB>`
+- `SECURITY_JWT_SECRET= `
+- `SECURITY_PASSWORD_SALT= `
+- `SECURITY_PASSWORD_KEYLEN= `
+- `SECURITY_PASSWORD_ITERATIONS= `
+
+Use terminal commands:
+- `npm i` : at the root of the project to install all dependencies
+- `npm run dev` : start the server
+
 ## My process
 
 ### Built with
@@ -49,6 +65,9 @@ You can also choose between options like:
 #### DB
 - MongoDB
 
+### Continued development
+
+In the future I plan to finish and do all features that I haven't done or finished so far.
 
 ## Author
 
