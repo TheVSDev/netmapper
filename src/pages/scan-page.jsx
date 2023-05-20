@@ -1,6 +1,7 @@
 // Imports
 import Head from "next/head"
 import * as yup from "yup"
+import { useState } from "react"
 
 import Main from "@/web/components/Main"
 import NavBar from "@/web/components/NavBar"
@@ -9,6 +10,7 @@ import FormField from "@/web/components/FormField"
 import SubmitButton from "@/web/components/SubmitButton"
 import Footer from "@/web/components/Footer"
 import Radio from "@/web/components/Radio"
+import api from "@/web/services/api"
 
 // Form attributes
 const initialValues = {
@@ -28,6 +30,14 @@ const validationSchema = yup.object().shape({
 
 // ScanPage function
 const ScanPage = () => {
+  const [newResult, setNewResult] = useState()
+  const handleSubmit = async (values) => {
+    const {
+      data: { result },
+    } = await api.post("/command", values)
+    setNewResult(result)
+  }
+
     return (
         <>
           <Head>
@@ -39,7 +49,12 @@ const ScanPage = () => {
           <Main>
             <NavBar />
             <br />
-            <Form title="Net Mapper" initialValues={initialValues} validationSchema={validationSchema}>
+            <Form 
+              title="Net Mapper" 
+              initialValues={initialValues} 
+              validationSchema={validationSchema}
+              onSubmit={handleSubmit}
+              >
                 <label>What are you mapping ? </label>
                 <br />
                 <FormField type="text" name="ip" placeholder="IP" />
@@ -66,6 +81,9 @@ const ScanPage = () => {
                 <SubmitButton submitValue="Run Scan" />
             </Form>
             <br />
+              <section className="mx-auto mt-6 flex flex-col w-3">
+                <span>{newResult}</span>
+              </section>
           </Main>
           <Footer />
         </>
