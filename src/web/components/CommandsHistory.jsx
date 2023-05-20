@@ -1,6 +1,6 @@
 import ResultMap from "@/web/components/ResultMap"
 
-const HistoryCommands = (props) => {
+const CommandsHistory = (props) => {
     const { result, children } = props
 
     return (
@@ -11,4 +11,4 @@ const HistoryCommands = (props) => {
     )
 }
 
-export default HistoryCommands
+export default CommandsHistory

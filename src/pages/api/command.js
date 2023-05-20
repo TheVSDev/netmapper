@@ -14,12 +14,12 @@ const handler = mw({
       const user = req.user
 
       // Initializing option arrays for storing options
-      let allOptions = []
+      let everyOption = []
       let commandOptions = []
 
       // Pushing scanOption to option arrays
       if (scanOption) {
-        allOptions.push(scanOption)
+        everyOption.push(scanOption)
         commandOptions.push(scanOption)
       }
 
@@ -30,7 +30,7 @@ const handler = mw({
             (match) => "-" + match.toLowerCase()
           )}`
           // Pushing options into option arrays
-          allOptions.push(option)
+          everyOption.push(option)
           commandOptions.push(option)
           commandOptions.push(optionValue)
         }
@@ -56,7 +56,7 @@ const handler = mw({
         // Creating DB model from scan result
         const command = await CommandModel.create({
           ip,
-          options: allOptions,
+          options: everyOption,
           result,
           user: { id: user._id, username: user.username },
         })
