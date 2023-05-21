@@ -12,11 +12,11 @@ export const AppContextProvider = (props) => {
     setSession(null)
     localStorage.removeItem(config.session.localStorageKey)
   }
-  const signIn = async (email, password) => {
+  const signIn = async (username, password) => {
     try {
       const {
         data: { result: jwt },
-      } = await api.post("/sign-in", { email, password })
+      } = await api.post("/sign-in", { username, password })
 
       localStorage.setItem(config.session.localStorageKey, jwt)
       setSession(jsonwebtoken.decode(jwt).payload)
@@ -44,8 +44,8 @@ export const AppContextProvider = (props) => {
           session,
         },
         actions: {
-          signOut,
           signIn,
+          signOut,
         },
       }}
       {...props}

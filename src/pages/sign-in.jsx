@@ -1,10 +1,10 @@
 // Imports
 import Head from "next/head"
-import { useRouter } from "next/router"
-import { useContext } from "react"
 import * as yup from "yup"
+// import { useRouter } from "next/router"
+// import { useContext } from "react"
 
-import AppContext from "@/web/components/AppContext"
+// import AppContext from "@/web/components/AppContext"
 import SubmitButton from "@/web/components/SubmitButton.jsx"
 import Main from "@/web/components/Main"
 import NotConnectedNavbar from "@/web/components/NotConnectedNavbar"
@@ -25,18 +25,20 @@ const validationSchema = yup.object().shape({
 
 // SignIn function
 const SignIn = () => {
-  const router = useRouter()
-  const { actions: { signIn },
-  } = useContext(AppContext)
-  const handleSubmit = async (values, { resetForm }) => {
+  // const router = useRouter()
+  // const {
+  //   actions: { signIn },
+  // } = useContext(AppContext)
+  
+  // Function to be executed when the form is submitted
+/*  const handleSubmit = async (values) => {
     const { username, password } = values
     const [err] = await signIn(username, password)
-
+  
     if (!err) {
-      resetForm()
-      router.push("/scan")
+      router.push("/scan-page")
     }
-  }
+  }*/
 
   return (
     <>
@@ -52,7 +54,7 @@ const SignIn = () => {
           title="Sign In"
           initialValues={initialValues}
           validationSchema={validationSchema}
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
         >
           <label>Username:</label>
           <FormField
