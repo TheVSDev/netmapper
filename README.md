@@ -71,4 +71,4 @@ In the future I plan to finish and do all features that I haven't done or finish
 
 ## Author
 
-- Website - [Veljko Spasic](https://veljkospasic.rf.gd)
+- Website - [Veljko Spasic](https://veljko-spasic.rf.gd)
